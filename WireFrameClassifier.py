@@ -24,7 +24,7 @@ contours, _ = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX
 
 # Pour chaque contour détecté
 for contour in contours:
-    # Extraire les coordonnées de la boîte englobante
+    # Extract coordinates from bounding box
     x, y, w, h = cv2.boundingRect(contour)
     
     # Extraire la région d'intérêt (ROI) de l'image originale
