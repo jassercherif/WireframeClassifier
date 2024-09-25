@@ -1,19 +1,19 @@
  
-import cv2  
-import matplotlib.pyplot as plt       
-import numpy as np     
-from tensorflow.keras.models import load_model         
-         
-# Load the trained classification model               
-model = load_model('CNN.keras')            
+import cv2   
+import matplotlib.pyplot as plt        
+import numpy as np      
+from tensorflow.keras.models import load_model           
+          
+# Load the trained classification model                 
+model = load_model('CNN.keras')             
               
-# Load the image                 
-image = cv2.imread('../images/mo4.jpg')                     
-classes = ['button','imagecercle','imagerectangle','input','logo','text']                   
+# Load the image                  
+image = cv2.imread('../images/mo4.jpg')                      
+classes = ['button','imagecercle','imagerectangle','input','logo','text']                    
 # Convertir l'image en niveaux de gris                
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)                
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)                  
             
-# Appliquer un flou gaussien pour réduire le bruit                
+# Appliquer un flou gaussien pour réduire le bruit                 
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)                 
           
 # Detecting edges with Canny's algorithm               
