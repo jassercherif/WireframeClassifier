@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 # Load the trained classification model                                        
 model = load_model('CNN.keras')                                         
                  
-# Load the image                                                             
+# Load the Image                                                             
 image = cv2.imread('../images/mo4.jpg')                                                                                              
 classes = ['button','imagecercle','imagerectangle','input','logo','text']                          
 # Convertir l'image en niveaux de gris                             
